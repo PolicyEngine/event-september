@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Private/sensitive information
+.env
+.env.local
+private/
+credentials/
+
+# Build outputs
+dist/
+build/
+out/
