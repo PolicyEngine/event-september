@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolicyEngine September 2025 event</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --background: #ffffff;
+            --text: #2c3e50;
+            --border: #ecf0f1;
+            --light-bg: #f8f9fa;
+            --success: #27ae60;
+            --warning: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--light-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            background-color: var(--background);
+        }
+
+        .nav-tab.active {
+            border-bottom-color: var(--secondary);
+            background-color: var(--background);
+        }
+
+        .content-section {
+            display: none;
+            padding: 2rem 0;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-weight: 400;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-weight: 500;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background-color: var(--warning);
+            color: white;
+            margin: 1rem 0;
+        }
+
+        .priority-list {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .priority-list ol {
+            margin-left: 1.5rem;
+        }
+
+        .priority-list li {
+            margin: 0.5rem 0;
+        }
+
+        .date-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .date-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .date-card strong {
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+
+        th {
+            background-color: var(--light-bg);
+            color: var(--primary);
+            text-align: left;
+            padding: 1rem;
+            font-weight: 500;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .venue-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .venue-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .pros, .cons {
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .pros {
+            background-color: #e8f5e9;
+            border-left: 3px solid var(--success);
+        }
+
+        .cons {
+            background-color: #ffebee;
+            border-left: 3px solid var(--accent);
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .contact-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-tabs {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PolicyEngine September 2025 event</h1>
+            <p class="subtitle">Planning hub for PolicyEngine's major policy gathering</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-tabs">
+                <li class="nav-tab active" onclick="showSection('overview')">Overview</li>
+                <li class="nav-tab" onclick="showSection('event-plan')">Event plan</li>
+                <li class="nav-tab" onclick="showSection('tasks')">Task tracker</li>
+                <li class="nav-tab" onclick="showSection('logistics')">Logistics</li>
+                <li class="nav-tab" onclick="showSection('venue')">Venue recommendation</li>
+                <li class="nav-tab" onclick="showSection('contact')">Contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="content-section active">
+            <h2>Event vision</h2>
+            <p>PolicyEngine is planning a major event in September 2025 to showcase our impact in tax and benefit modelling, engage with key stakeholders, and outline future developments in evidence-based policy analysis.</p>
+            
+            <div class="status-badge">🟡 Planning phase - Confirming date, format and budget</div>
+            
+            <div class="priority-list">
+                <h3>Immediate priorities</h3>
+                <ol>
+                    <li>Confirm event date in September 2025</li>
+                    <li>Choose between conference, workshop or hackathon format</li>
+                    <li>Establish organising committee</li>
+                    <li>Set budget parameters</li>
+                    <li>Begin venue search</li>
+                </ol>
+            </div>
+
+            <h2>Key dates</h2>
+            <div class="date-grid">
+                <div class="date-card">
+                    <strong>March 2025</strong>
+                    Begin active planning (6 months out)
+                </div>
+                <div class="date-card">
+                    <strong>May 2025</strong>
+                    Launch registration (4 months out)
+                </div>
+                <div class="date-card">
+                    <strong>July 2025</strong>
+                    Finalise agenda (2 months out)
+                </div>
+                <div class="date-card">
+                    <strong>September 2025</strong>
+                    Event date (TBC)
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Plan Section -->
+        <section id="event-plan" class="content-section">
+            <h2>Event concept</h2>
+            <p>A gathering to showcase PolicyEngine's impact, engage with stakeholders and outline future developments in tax and benefit modelling.</p>
+
+            <h2>Objectives</h2>
+            <ol>
+                <li>Demonstrate PolicyEngine's capabilities and recent achievements</li>
+                <li>Engage with policymakers, researchers and partners</li>
+                <li>Launch new features or research findings</li>
+                <li>Build community around evidence-based policy analysis</li>
+            </ol>
+
+            <h2>Format options</h2>
+            <div class="venue-card">
+                <h3>Option 1: Conference format</h3>
+                <p>Half-day or full-day conference with keynote speakers, panel discussions and demonstrations of PolicyEngine tools.</p>
+            </div>
+            
+            <div class="venue-card">
+                <h3>Option 2: Workshop series</h3>
+                <p>Interactive sessions where participants can learn to use PolicyEngine for their own analysis.</p>
+            </div>
+            
+            <div class="venue-card">
+                <h3>Option 3: Policy hackathon</h3>
+                <p>Collaborative event where teams work on real policy challenges using PolicyEngine.</p>
+            </div>
+
+            <h2>Audience</h2>
+            <ul>
+                <li>Policymakers and civil servants</li>
+                <li>Think tanks and research organisations</li>
+                <li>Academic researchers</li>
+                <li>Third sector organisations</li>
+                <li>Media and journalists</li>
+            </ul>
+
+            <h2>Timeline</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timeframe</th>
+                        <th>Activities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>6 months before</strong><br>(March 2025)</td>
+                        <td>Confirm event date and format, book venue, begin speaker outreach</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4 months before</strong><br>(May 2025)</td>
+                        <td>Launch event website, open registration, confirm keynote speakers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2 months before</strong><br>(July 2025)</td>
+                        <td>Finalise agenda, promote through partners, prepare materials</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1 month before</strong><br>(August 2025)</td>
+                        <td>Final speaker briefings, test technical requirements, confirm catering</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Week of event</strong></td>
+                        <td>Final preparations, staff briefing, equipment setup</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Task Tracker Section -->
+        <section id="tasks" class="content-section">
+            <h2>Task tracker</h2>
+            
+            <h3>Immediate priorities</h3>
+            <div class="venue-card">
+                <h4>Strategic decisions needed</h4>
+                <ul class="checklist">
+                    <li>Confirm event date (September 2025)</li>
+                    <li>Choose event format (conference/workshop/hackathon)</li>
+                    <li>Set budget parameters</li>
+                    <li>Define success metrics</li>
+                    <li>Establish organising committee</li>
+                </ul>
+            </div>
+
+            <div class="venue-card">
+                <h4>Initial planning</h4>
+                <ul class="checklist">
+                    <li>Research venue options in London</li>
+                    <li>Draft speaker wishlist</li>
+                    <li>Outline content themes</li>
+                    <li>Design event branding</li>
+                    <li>Create project timeline</li>
+                </ul>
+            </div>
+
+            <h3>Planning phase tasks</h3>
+            <div class="venue-card">
+                <h4>Venue and logistics</h4>
+                <ul class="checklist">
+                    <li>Scout venues</li>
+                    <li>Get venue quotes</li>
+                    <li>Check accessibility requirements</li>
+                    <li>Arrange catering options</li>
+                    <li>Plan room layouts</li>
+                </ul>
+            </div>
+
+            <div class="venue-card">
+                <h4>Programme development</h4>
+                <ul class="checklist">
+                    <li>Develop session formats</li>
+                    <li>Identify keynote speakers</li>
+                    <li>Plan panel discussions</li>
+                    <li>Design interactive elements</li>
+                    <li>Create run sheet</li>
+                </ul>
+            </div>
+
+            <div class="venue-card">
+                <h4>Communications</h4>
+                <ul class="checklist">
+                    <li>Design event identity</li>
+                    <li>Build event webpage</li>
+                    <li>Draft invitation copy</li>
+                    <li>Plan social media strategy</li>
+                    <li>Prepare press materials</li>
+                </ul>
+            </div>
+
+            <h3>Resource requirements</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team roles</th>
+                        <th>External support</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Event lead</li>
+                                <li>Programme coordinator</li>
+                                <li>Communications manager</li>
+                                <li>Technical support</li>
+                                <li>Registration team</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Venue coordinator</li>
+                                <li>Catering service</li>
+                                <li>AV technician</li>
+                                <li>Photographer</li>
+                                <li>Live captioning service</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Logistics Section -->
+        <section id="logistics" class="content-section">
+            <h2>Venue requirements</h2>
+            
+            <div class="venue-card">
+                <h3>Capacity and layout</h3>
+                <ul>
+                    <li>Main auditorium: 100-150 people</li>
+                    <li>Breakout rooms: 2-3 spaces for 20-30 people each</li>
+                    <li>Networking space: Reception area for breaks</li>
+                    <li>Exhibition space: Area for demos and partner stands</li>
+                </ul>
+            </div>
+
+            <div class="venue-card">
+                <h3>Location criteria</h3>
+                <ul>
+                    <li>Central London for accessibility</li>
+                    <li>Near public transport links</li>
+                    <li>Step-free access throughout</li>
+                    <li>Parking availability nearby</li>
+                </ul>
+            </div>
+
+            <h2>Potential venues</h2>
+            
+            <div class="venue-card">
+                <h3>Option 1: The British Academy</h3>
+                <p><strong>Capacity:</strong> 150 in main hall<br>
+                <strong>Location:</strong> Carlton House Terrace, SW1</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros:</strong> Prestigious, central, good facilities
+                    </div>
+                    <div class="cons">
+                        <strong>Cons:</strong> Higher cost, formal atmosphere
+                    </div>
+                </div>
+            </div>
+
+            <div class="venue-card">
+                <h3>Option 2: The Resolution Foundation</h3>
+                <p><strong>Capacity:</strong> 100 in conference room<br>
+                <strong>Location:</strong> Westminster</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros:</strong> Partner organisation, policy-focused environment
+                    </div>
+                    <div class="cons">
+                        <strong>Cons:</strong> Limited capacity
+                    </div>
+                </div>
+            </div>
+
+            <div class="venue-card">
+                <h3>Option 3: Kings Place</h3>
+                <p><strong>Capacity:</strong> Variable spaces<br>
+                <strong>Location:</strong> Kings Cross</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros:</strong> Modern facilities, good transport links
+                    </div>
+                    <div class="cons">
+                        <strong>Cons:</strong> Less policy-focused atmosphere
+                    </div>
+                </div>
+            </div>
+
+            <h2>Catering requirements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:30</td>
+                        <td>Registration coffee</td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td>Morning break</td>
+                    </tr>
+                    <tr>
+                        <td>12:30</td>
+                        <td>Lunch service</td>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td>Afternoon tea</td>
+                    </tr>
+                    <tr>
+                        <td>17:00</td>
+                        <td>Networking reception (if applicable)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Venue Recommendation Section -->
+        <section id="venue" class="content-section">
+            <h2>Venue recommendation</h2>
+            
+            <div class="highlight-box">
+                <h3>Recommended: One Great George Street - Brunel Room</h3>
+                <p><strong>Date:</strong> Friday 26th September 2025</p>
+                <p><strong>Expected attendance:</strong> 35 people</p>
+                <p><strong>Total cost:</strong> Approximately £3,300 (£94 per person)</p>
+            </div>
+
+            <h3>Why One Great George Street</h3>
+            <p>One Great George Street offers the best flexibility for 35 attendees without minimum number restrictions:</p>
+            
+            <ul>
+                <li><strong>Cost effectiveness:</strong> £1,900 day rate plus approximately £40 per person for catering</li>
+                <li><strong>Prime Westminster location:</strong> Walking distance from Parliament, Westminster and St James's Park stations</li>
+                <li><strong>Professional atmosphere:</strong> Historic venue regularly used for policy events</li>
+                <li><strong>Flexible space:</strong> No minimum attendance requirements</li>
+                <li><strong>Full facilities:</strong> Theatre-style seating for up to 54, built-in AV equipment, networking space</li>
+            </ul>
+
+            <h3>Proposed event schedule</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Session</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00-9:30</td>
+                        <td>Registration and welcome coffee</td>
+                    </tr>
+                    <tr>
+                        <td>9:30-9:45</td>
+                        <td>Opening remarks and introduction</td>
+                    </tr>
+                    <tr>
+                        <td>9:45-10:45</td>
+                        <td>Keynote: PolicyEngine's impact and developments</td>
+                    </tr>
+                    <tr>
+                        <td>10:45-11:00</td>
+                        <td>Coffee break</td>
+                    </tr>
+                    <tr>
+                        <td>11:00-12:00</td>
+                        <td>Live demonstrations of PolicyEngine tools</td>
+                    </tr>
+                    <tr>
+                        <td>12:00-13:00</td>
+                        <td>Networking lunch</td>
+                    </tr>
+                    <tr>
+                        <td>13:00-14:00</td>
+                        <td>Panel: Future of evidence-based policy</td>
+                    </tr>
+                    <tr>
+                        <td>14:00-15:00</td>
+                        <td>Interactive workshop sessions</td>
+                    </tr>
+                    <tr>
+                        <td>15:00-15:30</td>
+                        <td>Afternoon tea and networking</td>
+                    </tr>
+                    <tr>
+                        <td>15:30-16:30</td>
+                        <td>Research presentations and case studies</td>
+                    </tr>
+                    <tr>
+                        <td>16:30-17:00</td>
+                        <td>Closing remarks and next steps</td>
+                    </tr>
+                    <tr>
+                        <td>17:00-18:00</td>
+                        <td>Optional drinks reception</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Budget comparison</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Venue</th>
+                        <th>Venue cost</th>
+                        <th>Catering</th>
+                        <th>Total (35 people)</th>
+                        <th>Per person</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #e8f5e9;">
+                        <td><strong>One Great George Street</strong></td>
+                        <td>£1,900</td>
+                        <td>£1,400</td>
+                        <td><strong>£3,300</strong></td>
+                        <td><strong>£94</strong></td>
+                    </tr>
+                    <tr>
+                        <td>BMA House (40 min.)</td>
+                        <td>Included</td>
+                        <td>Included</td>
+                        <td>£4,560 + VAT</td>
+                        <td>£130</td>
+                    </tr>
+                    <tr>
+                        <td>York Road Auditorium</td>
+                        <td>£2,850 + VAT</td>
+                        <td>Separate</td>
+                        <td>~£4,200</td>
+                        <td>£120</td>
+                    </tr>
+                    <tr>
+                        <td>Glaziers Hall</td>
+                        <td>£2,750 + VAT</td>
+                        <td>£1,724 + VAT</td>
+                        <td>~£5,369</td>
+                        <td>£153</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Next steps</h3>
+            <ol>
+                <li>Confirm 26th September date</li>
+                <li>Book venue through <a href="https://hirespace.com/Spaces/London/134287/One-Great-George-Street/Brunel-Room/Business">HireSpace</a></li>
+                <li>Finalise catering package at approximately £40pp</li>
+                <li>Arrange site visit to confirm layout and AV setup</li>
+            </ol>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2>Organising committee</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Event lead</h4>
+                    <p><em>To be confirmed</em><br>
+                    Overall event strategy and coordination</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>Technical lead</h4>
+                    <p><strong>Nikhil Woodruff</strong> (CTO)<br>
+                    Technical demonstrations and content<br>
+                    nikhil@policyengine.org</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>Communications lead</h4>
+                    <p><em>To be confirmed</em><br>
+                    Marketing, PR and stakeholder engagement</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>Operations lead</h4>
+                    <p><em>To be confirmed</em><br>
+                    Logistics, venue and supplier management</p>
+                </div>
+            </div>
+
+            <h2>Working groups</h2>
+            
+            <div class="venue-card">
+                <h3>Programme committee</h3>
+                <p>Responsible for: Session planning, speaker invitations, content development, agenda coordination</p>
+            </div>
+            
+            <div class="venue-card">
+                <h3>Communications team</h3>
+                <p>Responsible for: Website and registration, social media strategy, press relations, partner outreach</p>
+            </div>
+            
+            <div class="venue-card">
+                <h3>Logistics team</h3>
+                <p>Responsible for: Venue coordination, catering arrangements, equipment and supplies, on-day operations</p>
+            </div>
+
+            <h2>How to get involved</h2>
+            <ol>
+                <li><strong>Join a working group</strong> - Email us with your area of interest</li>
+                <li><strong>Suggest speakers</strong> - Share recommendations for keynotes or panellists</li>
+                <li><strong>Become a partner</strong> - Explore sponsorship or collaboration opportunities</li>
+                <li><strong>Volunteer on the day</strong> - Help with registration, technical support or hosting</li>
+            </ol>
+
+            <h2>Key contacts</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>General enquiries</strong></td>
+                        <td>events@policyengine.org</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Partnership opportunities</strong></td>
+                        <td>partnerships@policyengine.org</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media enquiries</strong></td>
+                        <td>press@policyengine.org</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical questions</strong></td>
+                        <td>nikhil@policyengine.org</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>PolicyEngine September 2025 Event | Planning Hub</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update nav tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Fix tab highlighting
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
