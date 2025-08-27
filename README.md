@@ -25,68 +25,20 @@
 - **AV/tech** (10%) - Presentation capabilities
 - **Catering** (5%) - Food quality and convenience
 
-## Proposed schedule
+## Recommendation
 
-| Time | Activity |
-|------|----------|
-| 9:00-9:30 | Registration and welcome coffee |
-| 9:30-9:45 | Opening remarks |
-| 9:45-10:45 | Keynote: PolicyEngine impact |
-| 10:45-11:00 | Coffee break |
-| 11:00-12:00 | Live demonstrations |
-| 12:00-13:00 | Networking lunch |
-| 13:00-14:00 | Panel: Future of evidence-based policy |
-| 14:00-15:00 | Interactive workshops |
-| 15:00-15:30 | Afternoon tea |
-| 15:30-16:30 | Research presentations |
-| 16:30-17:00 | Closing remarks |
-| 17:00-18:00 | Optional drinks reception |
+**Go with One Great George Street** - best value at £94pp, Westminster location perfect for civil servants, no minimum attendance issues. Only downside is traditional rather than modern aesthetic.
 
-## Budget breakdown
-
-**Venue hire**: £1,900  
-**Catering**: £1,400 (£40 × 35)  
-**Total**: £3,300  
-**Per person**: £94
-
-*Additional costs to consider*:
-- Drinks reception: ~£500
-- Video recording: £1,500
-- Marketing materials: TBC
-- Speaker travel: TBC
-
-## Key contacts
-
-**One Great George Street**
-- Booking: https://hirespace.com/Spaces/London/134287/
-- Address: One Great George Street, Westminster, London SW1P 3AA
-
-**Alternative venues**:
-- BMA House: cspringer@bma.org.uk
-- Myo venues: events@myo.co.uk
-- York Road: freddie.cree@broadwick.com
+**If modern design is crucial**: Choose Myo New Street Square at similar price but ultra-modern facilities.
 
 ## Next steps
 
-1. ✅ Review venue options and rubric
-2. ⬜ Confirm venue booking for 26th September
-3. ⬜ Finalise catering selection
-4. ⬜ Begin speaker outreach
-5. ⬜ Design marketing materials
-6. ⬜ Open registration (July 2025)
+1. Book One Great George Street for 26 September via [booking link](https://hirespace.com/Spaces/London/134287/One-Great-George-Street/Brunel-Room/Business)
+2. Confirm £40pp catering package  
+3. Begin speaker invitations
 
-## Repository structure
+## Other documents
 
-- `/planning` - Event planning documents and timelines
-- `/materials` - Presentation materials and handouts
-- `/logistics` - Venue, catering and operational details
-- `/communications` - Marketing and outreach materials
-
-## Team
-
-- Event lead: TBC
-- Technical lead: Nikhil Woodruff (CTO)
-
----
-
-*Last updated: November 2024*
+- [Detailed venue analysis](venue-recommendation.md)
+- [Full evaluation rubric](venue-evaluation-rubric.md)
+- [Event plan](event-plan.md)
