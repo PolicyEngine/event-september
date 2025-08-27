@@ -8,7 +8,7 @@ permalink: /venue-recommendation/
 
 ## Executive summary
 
-For an expected attendance of 35 people, I recommend **One Great George Street - Brunel Room** as the primary choice for the PolicyEngine September 2025 event, as it offers flexibility without minimum attendance requirements.
+For an expected attendance of 35 people, I recommend **One Great George Street - Brunel Room** on **Friday 26th September 2025** as the primary choice for the PolicyEngine event. This venue offers flexibility without minimum attendance requirements and the date avoids Monday/Friday fatigue whilst providing good availability.
 
 ## Key requirements from event plan
 
@@ -41,6 +41,29 @@ One Great George Street offers the best flexibility for 35 attendees without min
 - Flexible catering options (coffee and sandwich lunch ~£40pp)
 
 **Availability**: 26th September confirmed available
+
+### Why Friday 26th September 2025
+
+**Strategic timing**: End of September allows for summer holiday season to conclude and Parliament to be in session, maximising attendance from policymakers.
+
+**Friday advantage**: Allows attendees to network more relaxedly without rushing back to offices, and out-of-London participants can travel Thursday evening if needed.
+
+**Venue availability**: This date has the best venue availability across multiple options, providing flexibility if plans change.
+
+### Proposed event schedule
+
+**9:00-9:30** - Registration and welcome coffee  
+**9:30-9:45** - Opening remarks and introduction  
+**9:45-10:45** - Keynote presentation: PolicyEngine's impact and developments  
+**10:45-11:00** - Coffee break  
+**11:00-12:00** - Live demonstrations of PolicyEngine tools  
+**12:00-13:00** - Networking lunch  
+**13:00-14:00** - Panel discussion: Future of evidence-based policy  
+**14:00-15:00** - Interactive workshop sessions  
+**15:00-15:30** - Afternoon tea and networking  
+**15:30-16:30** - Research presentations and case studies  
+**16:30-17:00** - Closing remarks and next steps  
+**17:00-18:00** - Optional drinks reception (additional cost)
 
 ### Alternative options considered
 
