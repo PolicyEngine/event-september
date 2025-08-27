@@ -1,61 +1,29 @@
 # PolicyEngine September event
 
-Planning and materials for PolicyEngine's September 2025 event.
+**Event date**: Friday 26th September 2025  
+**Expected attendees**: 35  
+**Recommended venue**: One Great George Street - Brunel Room, Westminster  
+**Total budget**: £3,300 (£94 per person)
 
-## Quick links
+## Venue comparison for 35 attendees
 
-- [Event plan](event-plan.md)
-- [Venue recommendation](venue-recommendation.md)
-- [Venue evaluation rubric](venue-evaluation-rubric.md)
-- [Task tracker](task-tracker.md)
+| Venue | Total cost | Per person | Location | Why it works | Why it doesn't | Score |
+|-------|------------|------------|----------|--------------|----------------|-------|
+| **[One Great George Street](https://hirespace.com/Spaces/London/134287/One-Great-George-Street/Brunel-Room/Business)** | **£3,300** | **£94** | **Westminster** | ✅ No minimum<br>✅ Parliament location<br>✅ Professional atmosphere<br>✅ Available 26 Sept | ❌ Traditional not modern<br>❌ Basic catering | **4.4** |
+| [Myo New Street Square](https://www.myo.co.uk) | £1,750-4,200 | £50-120 | City/Holborn | ✅ Ultra-modern design<br>✅ Flexible packages<br>✅ 30 person minimum works | ❌ Less prestigious<br>❌ Further from Parliament | 4.3 |
+| [BMA House](https://bmahouse.org.uk) | £4,560+VAT | £130 | Bloomsbury | ✅ All-inclusive premium<br>✅ Excellent catering<br>✅ Policy reputation | ❌ 40 person minimum<br>❌ Pay for empty seats | 3.3 |
+| [York Road Auditorium](https://spacesstories.com/space/york-road/the-auditorium/) | £4,200 | £120 | Waterloo | ✅ Modern tech setup<br>✅ Tiered seating<br>✅ No minimum | ❌ No food in venue<br>❌ Only 26 Sept available | 3.7 |
+| [Glaziers Hall](https://www.glaziershall.co.uk/) | £5,369 | £153 | London Bridge | ✅ Thames views<br>✅ Impressive space | ❌ Most expensive<br>❌ Less convenient location | 3.2 |
 
-## Event summary
+## Scoring criteria (1-5 scale)
 
-**Date**: Friday 26th September 2025  
-**Time**: 9:00-17:00 (optional drinks until 18:00)  
-**Venue**: One Great George Street - Brunel Room (recommended)  
-**Location**: Westminster, London SW1P 3AA  
-**Capacity**: 35 attendees  
-**Budget**: £3,300 total (£94 per person)
-
-## Venue recommendation
-
-### Primary choice: One Great George Street - Brunel Room
-
-**Why this venue**:
-- Prime Westminster location near Parliament
-- No minimum attendance requirements (perfect for 35)
-- £1,900 day rate + £40pp catering = £3,300 total
-- Available 26th September 2025
-- Professional atmosphere for policy audience
-
-**Booking**: https://hirespace.com/Spaces/London/134287/One-Great-George-Street/Brunel-Room/Business
-
-### Alternative if modern aesthetic preferred: Myo New Street Square
-
-- Ultra-modern design and facilities
-- City/Holborn location
-- From £50pp for day packages
-- Minimum 30 guests (works for 35)
-
-## Venue evaluation matrix
-
-| Venue | Score | Cost (35 people) | Location | Modern design | Min. guests |
-|-------|-------|------------------|----------|---------------|-------------|
-| **One Great George St** | **4.4** | £3,300 (£94pp) | Westminster | Traditional | None |
-| Myo New Street Square | 4.3 | £1,750-4,200 | City/Holborn | Ultra-modern | 30 |
-| York Road Auditorium | 3.7 | ~£4,200 | Waterloo | Contemporary | None |
-| BMA House | 3.3 | £4,560+VAT | Bloomsbury | Traditional | 40 |
-| Glaziers Hall | 3.2 | £5,369 | London Bridge | Modern | None |
-
-### Evaluation criteria
-1. **Cost effectiveness** (25%): Value for money
-2. **Location accessibility** (20%): Transport links and audience proximity
-3. **Modern look and feel** (15%): Contemporary design and atmosphere
-4. **Capacity flexibility** (15%): Suitability for 35 attendees
-5. **Professional atmosphere** (10%): Appropriate for policy audience
-6. **AV/technical capabilities** (10%): Presentation facilities
-7. **Catering quality** (5%): Food and beverage provision
+- **Cost effectiveness** (25%) - Value for money at £35 attendees
+- **Location** (20%) - Proximity to Parliament and transport
+- **Modern design** (15%) - Contemporary vs traditional aesthetic  
+- **Flexibility** (15%) - How well it fits 35 people without overpaying
+- **Professional atmosphere** (10%) - Appropriate for policy audience
+- **AV/tech** (10%) - Presentation capabilities
+- **Catering** (5%) - Food quality and convenience
 
 ## Proposed schedule
 
