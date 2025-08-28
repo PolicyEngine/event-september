@@ -272,6 +272,206 @@
             margin-bottom: 1rem;
         }
 
+        /* Venue Comparison Table Styles */
+        .comparison-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            min-width: 800px;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .comparison-table thead {
+            background: #e0e0e0;
+            color: var(--primary);
+        }
+
+        .comparison-table th {
+            padding: 1.2rem 1rem;
+            text-align: left;
+            font-weight: 500;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .comparison-table th:last-child {
+            border-right: none;
+        }
+
+        .comparison-table th:first-child {
+            width: 180px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .comparison-table tbody tr {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover {
+            background-color: var(--light-bg);
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-right: 1px solid var(--border);
+        }
+
+        .comparison-table td:last-child {
+            border-right: none;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 500;
+            background-color: #f8f9fa;
+            color: var(--primary);
+        }
+
+        .check-icon {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .cross-icon {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .maybe-icon {
+            color: var(--warning);
+            font-size: 1.2rem;
+        }
+
+        .best-value {
+            background-color: #e8f5e9;
+            position: relative;
+        }
+
+        .best-value::before {
+            content: "BEST VALUE";
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: var(--success);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .recommended {
+            background-color: #fff3e0;
+            position: relative;
+        }
+
+        .recommended::before {
+            content: "RECOMMENDED";
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: var(--warning);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Sub-tabs styles */
+        .sub-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .sub-tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .sub-tab:hover {
+            background-color: var(--light-bg);
+        }
+
+        .sub-tab.active {
+            border-bottom-color: var(--secondary);
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .sub-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .sub-content.active {
+            display: block;
+        }
+
+        /* Tooltip styles */
+        .info-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 16px;
+            font-size: 10px;
+            margin-left: 4px;
+            cursor: help;
+            position: relative;
+        }
+
+        .info-icon:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+            font-size: 12px;
+            z-index: 1000;
+            margin-top: 5px;
+            max-width: 250px;
+            white-space: normal;
+            text-align: left;
+        }
+
+        .info-icon:hover::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-bottom-color: #333;
+            margin-top: -5px;
+        }
+
         footer {
             background-color: var(--primary);
             color: white;
@@ -308,10 +508,10 @@
         <div class="container">
             <ul class="nav-tabs">
                 <li class="nav-tab active" onclick="showSection('overview')">Overview</li>
+                <li class="nav-tab" onclick="showSection('venue')">Venue recommendation</li>
                 <li class="nav-tab" onclick="showSection('event-plan')">Event plan</li>
                 <li class="nav-tab" onclick="showSection('tasks')">Task tracker</li>
                 <li class="nav-tab" onclick="showSection('logistics')">Logistics</li>
-                <li class="nav-tab" onclick="showSection('venue')">Venue recommendation</li>
                 <li class="nav-tab" onclick="showSection('contact')">Contact</li>
             </ul>
         </div>
@@ -590,6 +790,37 @@
                 </div>
             </div>
 
+            <div class="venue-card">
+                <h3>Option 4: The Institute of Directors</h3>
+                <p><strong>Capacity:</strong> 120 in Nash Room<br>
+                <strong>Location:</strong> Pall Mall, SW1</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros:</strong> Historic venue, excellent facilities, prestigious address
+                    </div>
+                    <div class="cons">
+                        <strong>Cons:</strong> Premium pricing, formal dress code required
+                    </div>
+                </div>
+            </div>
+
+            <div class="venue-card">
+                <h3>Option 5: The Chesterfield Mayfair - Royal Suite</h3>
+                <p><strong>Capacity:</strong> One large room with partition for two spaces<br>
+                <strong>Location:</strong> Mayfair, W1<br>
+                <strong>Availability:</strong> 26th September available<br>
+                <strong>Venue cost:</strong> £850 per day<br>
+                <strong>Catering options:</strong> Tea & coffee £7pp | Lunch £45pp | Half-day package £25pp (until 1pm)</p>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <strong>Pros:</strong> Flexible space with partition, prestigious Mayfair location, very competitive pricing
+                    </div>
+                    <div class="cons">
+                        <strong>Cons:</strong> May need to confirm capacity for 35 people
+                    </div>
+                </div>
+            </div>
+
             <h2>Catering requirements</h2>
             <table>
                 <thead>
@@ -627,22 +858,436 @@
         <section id="venue" class="content-section">
             <h2>Venue recommendation</h2>
             
-            <div class="highlight-box">
-                <h3>Recommended: One Great George Street - Brunel Room</h3>
-                <p><strong>Date:</strong> Friday 26th September 2025</p>
-                <p><strong>Expected attendance:</strong> 35 people</p>
-                <p><strong>Total cost:</strong> Approximately £3,300 (£94 per person)</p>
+            <!-- Sub-tabs for Table/Map view -->
+            <div class="sub-tabs">
+                <button class="sub-tab active" onclick="showSubSection('table-view')">Table View</button>
+                <button class="sub-tab" onclick="showSubSection('map-view')">Map View</button>
             </div>
 
-            <h3>Why One Great George Street</h3>
-            <p>One Great George Street offers the best flexibility for 35 attendees without minimum number restrictions:</p>
+            <!-- Table View -->
+            <div id="table-view" class="sub-content active">
+                <div class="comparison-container">
+                    <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Venue</th>
+                            <th>Location</th>
+                            <th>Total Cost</th>
+                            <th>Per Person</th>
+                            <th>Capacity</th>
+                            <th>Google Rating</th>
+                            <th>Atmosphere</th>
+                            <th>Availability</th>
+                            <th>Catering</th>
+                            <th>AV<span class="info-icon" data-tooltip="Audio-Visual equipment: screens, microphones, projectors, video conferencing">i</span></th>
+                            <th>Breakout<span class="info-icon" data-tooltip="Additional rooms or spaces for smaller group sessions, networking, or breaks">i</span></th>
+                            <th>Near Parliament</th>
+                            <th>Claude Rating</th>
+                            <th>Website</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CHW Maurice Barnett/John Tudor + Syndicate (Half)</td>
+                            <td>Westminster, SW1</td>
+                            <td>£1,660 + VAT</td>
+                            <td>£47 + VAT</td>
+                            <td>60 theatre</td>
+                            <td>4.4 ⭐ (78)</td>
+                            <td>Professional</td>
+                            <td><span class="check-icon">✓</span> 25, 26 Sep</td>
+                            <td><span class="check-icon">✓</span> £18-26pp</td>
+                            <td><span class="check-icon">✓</span> LCD incl, Video TBA</td>
+                            <td><span class="check-icon">✓</span> Separate</td>
+                            <td><span class="check-icon">✓</span> Westminster</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td><a href="https://www.c-h-w.com/venue/60-people/">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>CHW Maurice Barnett/John Tudor + Syndicate (Full)</td>
+                            <td>Westminster, SW1</td>
+                            <td>£2,240 + VAT</td>
+                            <td>£64 + VAT</td>
+                            <td>60 theatre</td>
+                            <td>4.4 ⭐ (78)</td>
+                            <td>Professional</td>
+                            <td><span class="check-icon">✓</span> 25, 26 Sep</td>
+                            <td><span class="check-icon">✓</span> £18-26pp</td>
+                            <td><span class="check-icon">✓</span> LCD incl, Video TBA</td>
+                            <td><span class="check-icon">✓</span> Separate</td>
+                            <td><span class="check-icon">✓</span> Westminster</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td><a href="https://www.c-h-w.com/venue/60-people/">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>St Margaret's Trevelyan Room</td>
+                            <td>Westminster, SW1</td>
+                            <td>£1,545</td>
+                            <td>£44</td>
+                            <td>50-60 theatre</td>
+                            <td>4.5 ⭐ (92)</td>
+                            <td>Historic, Church venue</td>
+                            <td><span class="check-icon">✓</span> 25, 26 Sep</td>
+                            <td><span class="check-icon">✓</span> £11-25pp</td>
+                            <td><span class="maybe-icon">○</span> £95 projector</td>
+                            <td><span class="check-icon">✓</span> Separate</td>
+                            <td><span class="check-icon">✓</span> Westminster</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td><a href="https://www.stmwvenue.co.uk/rooms">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>Chesterfield Mayfair (Half day)</td>
+                            <td>Mayfair, W1</td>
+                            <td>£1,725</td>
+                            <td>£49</td>
+                            <td>40-50</td>
+                            <td>4.5 ⭐ (1,842)</td>
+                            <td>Luxury, Modern</td>
+                            <td><span class="check-icon">✓</span> 25 Sep until 1pm</td>
+                            <td><span class="check-icon">✓</span> £25pp</td>
+                            <td><span class="maybe-icon">○</span></td>
+                            <td><span class="check-icon">✓</span> Partition</td>
+                            <td>15 min</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td><a href="https://chesterfieldmayfair.com/meetings-and-events/corporate">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>One Great George St - Palmer</td>
+                            <td>Westminster, SW1</td>
+                            <td>£3,045</td>
+                            <td>£87</td>
+                            <td>50-70 theatre</td>
+                            <td>4.6 ⭐ (89)</td>
+                            <td>Historic, Prestigious</td>
+                            <td><span class="maybe-icon">○</span> 26 Sep TBC</td>
+                            <td><span class="check-icon">✓</span> All inclusive</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="maybe-icon">○</span> Limited</td>
+                            <td><span class="check-icon">✓</span> 5 min</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td><a href="https://www.onegreatgeorgestreet.com/rooms/medium-rooms/palmer-room">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>MYO Victoria St - Lane-Fox</td>
+                            <td>Victoria St, SW1</td>
+                            <td>£2,160</td>
+                            <td>£62</td>
+                            <td>50 theatre</td>
+                            <td>4.3 ⭐ (312)</td>
+                            <td>Contemporary, Tech-forward</td>
+                            <td><span class="maybe-icon">○</span> TBC</td>
+                            <td>From £60pp package</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="maybe-icon">○</span> Atrium</td>
+                            <td>10 min</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td><a href="https://myo.co.uk">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>Chesterfield Mayfair (Full day)</td>
+                            <td>Mayfair, W1</td>
+                            <td>£2,670</td>
+                            <td>£76</td>
+                            <td>40-50</td>
+                            <td>4.5 ⭐ (1,842)</td>
+                            <td>Luxury, Modern</td>
+                            <td><span class="check-icon">✓</span> 26 Sep full day</td>
+                            <td><span class="check-icon">✓</span> £52pp</td>
+                            <td><span class="maybe-icon">○</span></td>
+                            <td><span class="check-icon">✓</span> Partition</td>
+                            <td>15 min</td>
+                            <td>⭐⭐⭐</td>
+                            <td><a href="https://chesterfieldmayfair.com/meetings-and-events/corporate">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>One Great George St - Brunel</td>
+                            <td>Westminster, SW1</td>
+                            <td>£3,300</td>
+                            <td>£94</td>
+                            <td>54 theatre</td>
+                            <td>4.6 ⭐ (89)</td>
+                            <td>Historic, Prestigious</td>
+                            <td><span class="maybe-icon">○</span> 26 Sep TBC</td>
+                            <td><span class="check-icon">✓</span> £40pp</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="maybe-icon">○</span> Limited</td>
+                            <td><span class="check-icon">✓</span> 5 min</td>
+                            <td>⭐⭐⭐</td>
+                            <td><a href="https://hirespace.com/Spaces/London/134287/One-Great-George-Street/Brunel-Room/Business">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>BMA House - Prince's Room</td>
+                            <td>Tavistock Sq, WC1</td>
+                            <td>£3,325 + VAT</td>
+                            <td>£95 + VAT</td>
+                            <td>40-70 theatre</td>
+                            <td>4.4 ⭐ (156)</td>
+                            <td>Classic, Professional</td>
+                            <td><span class="check-icon">✓</span> 22, 24, 26 Sep</td>
+                            <td><span class="check-icon">✓</span> All inclusive</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td>20 min</td>
+                            <td>⭐⭐⭐</td>
+                            <td><a href="https://bmahouse.org.uk">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>MYO St Paul's - Event Suite</td>
+                            <td>One New Change, EC4</td>
+                            <td>£3,600</td>
+                            <td>£103</td>
+                            <td>86 theatre</td>
+                            <td>4.3 ⭐ (312)</td>
+                            <td>Contemporary, Tech-forward</td>
+                            <td><span class="maybe-icon">○</span> TBC</td>
+                            <td>From £62pp package</td>
+                            <td><span class="check-icon">✓</span> 6 screens</td>
+                            <td><span class="check-icon">✓</span> Lounge</td>
+                            <td><span class="check-icon">✓</span> 2 min</td>
+                            <td>⭐⭐⭐</td>
+                            <td><a href="https://myo.co.uk">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>York Road Auditorium</td>
+                            <td>Waterloo, SE1</td>
+                            <td>£2,850 + VAT</td>
+                            <td>£81 + VAT</td>
+                            <td>100 tiered</td>
+                            <td>4.2 ⭐ (45)</td>
+                            <td>Modern, Creative</td>
+                            <td><span class="check-icon">✓</span> 26 Sep ONLY</td>
+                            <td><span class="cross-icon">✗</span> Separate space</td>
+                            <td><span class="check-icon">✓</span> LED</td>
+                            <td><span class="check-icon">✓</span> £1k extra</td>
+                            <td>15 min</td>
+                            <td>⭐⭐</td>
+                            <td><a href="https://spacesstories.com/space/york-road/the-auditorium/">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>Glaziers Hall - Bridge Room</td>
+                            <td>London Bridge, SE1</td>
+                            <td>£4,474 + VAT</td>
+                            <td>£128 + VAT</td>
+                            <td>75 theatre</td>
+                            <td>4.5 ⭐ (234)</td>
+                            <td>Traditional, Elegant</td>
+                            <td><span class="maybe-icon">○</span> TBC</td>
+                            <td><span class="check-icon">✓</span> £49.25pp + VAT</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td>25 min</td>
+                            <td>⭐⭐</td>
+                            <td><a href="https://www.glaziershall.co.uk/">View →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            
+            <!-- Map View -->
+            <div id="map-view" class="sub-content">
+                <div class="venue-card">
+                    <!-- Leaflet CSS -->
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+                    <!-- Leaflet JS -->
+                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+                    
+                    <div id="map" style="width: 100%; height: 600px; border-radius: 8px; position: relative; z-index: 1;"></div>
+                    
+                    <h3 style="margin-top: 2rem;">Venue Locations</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div onclick="focusMarker(0)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">1</span> Central Hall Westminster</h4>
+                            <p>Storey's Gate, Westminster SW1H 9NH<br>
+                            <small>Near Parliament • £29-42pp + VAT • Best Value!</small></p>
+                        </div>
+                        <div onclick="focusMarker(1)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">2</span> St Margaret's Church</h4>
+                            <p>Westminster, SW1<br>
+                            <small>Next to Westminster Abbey • £44pp</small></p>
+                        </div>
+                        <div onclick="focusMarker(2)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">3</span> Chesterfield Mayfair</h4>
+                            <p>35 Charles Street, Mayfair, W1J 5EB<br>
+                            <small>15 min from Parliament • £49-76pp</small></p>
+                        </div>
+                        <div onclick="focusMarker(3)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">4</span> One Great George Street</h4>
+                            <p>1 Great George St, Westminster, SW1P 3AA<br>
+                            <small>5 min from Parliament • £87-94pp</small></p>
+                        </div>
+                        <div onclick="focusMarker(4)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">5</span> BMA House</h4>
+                            <p>Tavistock Square, WC1H 9JP<br>
+                            <small>20 min from Parliament • £95pp + VAT</small></p>
+                        </div>
+                        <div onclick="focusMarker(5)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">6</span> York Road Auditorium</h4>
+                            <p>York Road, Waterloo, SE1 7ND<br>
+                            <small>15 min from Parliament • £81pp + VAT</small></p>
+                        </div>
+                        <div onclick="focusMarker(6)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">7</span> Glaziers Hall</h4>
+                            <p>9 Montague Close, SE1 9DD<br>
+                            <small>25 min from Parliament • £128pp + VAT</small></p>
+                        </div>
+                        <div onclick="focusMarker(7)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">8</span> MYO St Paul's</h4>
+                            <p>One New Change, EC4M 9AF<br>
+                            <small>2 min from St Paul's • £103pp</small></p>
+                        </div>
+                        <div onclick="focusMarker(8)" style="cursor: pointer; padding: 0.5rem; border-radius: 4px; transition: background 0.3s; border-left: 4px solid #e74c3c;">
+                            <h4><span style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 8px;">9</span> MYO Victoria Street</h4>
+                            <p>123 Victoria Street, SW1E 6DE<br>
+                            <small>10 min from Parliament • £62pp</small></p>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        let map;
+                        let markers = [];
+                        
+                        function initMap() {
+                            // Initialize the map when the tab is shown
+                            if (document.getElementById('map-view').classList.contains('active')) {
+                                createMap();
+                            }
+                        }
+                        
+                        function createMap() {
+                            // Central London coordinates
+                            const centerLondon = [51.507351, -0.127758];
+                            
+                            // Create the map using Leaflet (OpenStreetMap)
+                            map = L.map('map').setView(centerLondon, 13);
+                            
+                            // Venue locations
+                            const venues = [
+                                { 
+                                    name: "Central Hall Westminster",
+                                    position: { lat: 51.4994, lng: -0.1270 },
+                                    info: "<b>Central Hall Westminster</b><br>Maurice Barnett/John Tudor + Syndicate<br>Storey's Gate, Westminster SW1H 9NH<br>Capacity: 60<br>Cost: £29-42pp + VAT<br>Rating: 4.4⭐ (78 reviews)"
+                                },
+                                { 
+                                    name: "St Margaret's Church",
+                                    position: { lat: 51.4997, lng: -0.1266 },
+                                    info: "<b>St Margaret's Trevelyan Room</b><br>Westminster, SW1<br>Capacity: 50-60<br>Cost: £44pp<br>Rating: 4.5⭐ (92 reviews)"
+                                },
+                                { 
+                                    name: "Chesterfield Mayfair",
+                                    position: { lat: 51.5074, lng: -0.1476 },
+                                    info: "<b>Chesterfield Mayfair</b><br>35 Charles Street, W1J 5EB<br>Capacity: 40-50<br>Cost: £49-76pp<br>Rating: 4.5⭐ (1,842 reviews)"
+                                },
+                                { 
+                                    name: "One Great George Street",
+                                    position: { lat: 51.5016, lng: -0.1285 },
+                                    info: "<b>One Great George Street</b><br>1 Great George St, SW1P 3AA<br>Capacity: 50-70<br>Cost: £87-94pp<br>Rating: 4.6⭐ (89 reviews)"
+                                },
+                                { 
+                                    name: "BMA House",
+                                    position: { lat: 51.5253, lng: -0.1299 },
+                                    info: "<b>BMA House</b><br>Tavistock Square, WC1H 9JP<br>Capacity: 40-70<br>Cost: £95pp + VAT<br>Rating: 4.4⭐ (156 reviews)"
+                                },
+                                { 
+                                    name: "York Road Auditorium",
+                                    position: { lat: 51.5039, lng: -0.1088 },
+                                    info: "<b>York Road Auditorium</b><br>York Road, SE1 7ND<br>Capacity: 100<br>Cost: £81pp + VAT<br>Rating: 4.2⭐ (45 reviews)"
+                                },
+                                { 
+                                    name: "Glaziers Hall",
+                                    position: { lat: 51.5068, lng: -0.0890 },
+                                    info: "<b>Glaziers Hall</b><br>9 Montague Close, SE1 9DD<br>Capacity: 75<br>Cost: £128pp + VAT<br>Rating: 4.5⭐ (234 reviews)"
+                                },
+                                { 
+                                    name: "MYO St Paul's",
+                                    position: { lat: 51.5137, lng: -0.0952 },
+                                    info: "<b>MYO St Paul's</b><br>One New Change, EC4M 9AF<br>Capacity: 86<br>Cost: £103pp<br>Rating: 4.3⭐ (312 reviews)"
+                                },
+                                { 
+                                    name: "MYO Victoria Street",
+                                    position: { lat: 51.4976, lng: -0.1356 },
+                                    info: "<b>MYO Victoria Street</b><br>123 Victoria Street, SW1E 6DE<br>Capacity: 50<br>Cost: £62pp<br>Rating: 4.3⭐ (312 reviews)"
+                                }
+                            ];
+                            
+                            // Add OpenStreetMap tiles
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: '© OpenStreetMap contributors',
+                                maxZoom: 19
+                            }).addTo(map);
+                            
+                            // Add venue markers
+                            venues.forEach((venue, index) => {
+                                const marker = L.marker([venue.position.lat, venue.position.lng])
+                                    .addTo(map)
+                                    .bindPopup(venue.info);
+                                
+                                // Add number to marker
+                                const myIcon = L.divIcon({
+                                    html: `<div style="background: #e74c3c; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">${index + 1}</div>`,
+                                    iconSize: [30, 30],
+                                    className: 'custom-div-icon'
+                                });
+                                marker.setIcon(myIcon);
+                                
+                                markers.push(marker);
+                            });
+                            
+                            // Add Parliament marker for reference
+                            const parliament = L.marker([51.4994, -0.1248])
+                                .addTo(map)
+                                .bindPopup("<b>Houses of Parliament</b><br>Westminster, London SW1A 0AA<br>Reference point for distances");
+                            
+                            const parliamentIcon = L.divIcon({
+                                html: `<div style="background: #27ae60; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">P</div>`,
+                                iconSize: [30, 30],
+                                className: 'custom-div-icon'
+                            });
+                            parliament.setIcon(parliamentIcon);
+                        }
+                        
+                        function focusMarker(index) {
+                            if (markers[index] && map) {
+                                map.setView(markers[index].getLatLng(), 15);
+                                markers[index].openPopup();
+                            }
+                        }
+                        
+                        // Initialize map when Map View tab is clicked
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // Override the showSubSection function to initialize map
+                            const originalShowSubSection = window.showSubSection;
+                            window.showSubSection = function(subSectionId) {
+                                originalShowSubSection(subSectionId);
+                                if (subSectionId === 'map-view' && !map) {
+                                    setTimeout(createMap, 100);
+                                }
+                            };
+                        });
+                    </script>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Recommended: Central Hall Westminster - Maurice Barnett/John Tudor Room</h3>
+                <p><strong>Date:</strong> Thursday 25th or Friday 26th September 2025</p>
+                <p><strong>Expected attendance:</strong> 35 people</p>
+                <p><strong>Venue cost:</strong> £1,030 + VAT (half day) or £1,470 + VAT (full day)</p>
+                <p><strong>Catering:</strong> £4pp tea/coffee, £18pp standard lunch, £26pp luxury lunch</p>
+                <p><strong>Total with standard catering:</strong> £1,660 + VAT (half day) or £2,240 + VAT (full day) - approximately £47-64 per person + VAT</p>
+                <p><strong>Contact:</strong> Ben Jeffery - bjeffery@chvenues.com | 020 7654 3825</p>
+            </div>
+
+            <h3>Why Central Hall Westminster</h3>
+            <p>Central Hall Westminster offers exceptional value with the Maurice Barnett or John Tudor room plus connected syndicate room:</p>
             
             <ul>
-                <li><strong>Cost effectiveness:</strong> £1,900 day rate plus approximately £40 per person for catering</li>
-                <li><strong>Prime Westminster location:</strong> Walking distance from Parliament, Westminster and St James's Park stations</li>
-                <li><strong>Professional atmosphere:</strong> Historic venue regularly used for policy events</li>
-                <li><strong>Flexible space:</strong> No minimum attendance requirements</li>
-                <li><strong>Full facilities:</strong> Theatre-style seating for up to 54, built-in AV equipment, networking space</li>
+                <li><strong>Outstanding value:</strong> Lowest venue hire cost at £1,030 + VAT for half day, £1,470 + VAT for full day</li>
+                <li><strong>Perfect Westminster location:</strong> Storey's Gate, directly adjacent to Westminster Abbey and Parliament</li>
+                <li><strong>Dedicated catering space:</strong> Small Syndicate Room connected for catering and networking</li>
+                <li><strong>Professional facilities:</strong> LCD screen included, video recording available through Neil Drysdale</li>
+                <li><strong>Flexible timing:</strong> Half day (9am-1pm or 1pm-5pm) or full day options</li>
+                <li><strong>Confirmed availability:</strong> Both 25th and 26th September 2025 available</li>
             </ul>
 
             <h3>Proposed event schedule</h3>
@@ -705,49 +1350,6 @@
                 </tbody>
             </table>
 
-            <h3>Budget comparison</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Venue</th>
-                        <th>Venue cost</th>
-                        <th>Catering</th>
-                        <th>Total (35 people)</th>
-                        <th>Per person</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="background-color: #e8f5e9;">
-                        <td><strong>One Great George Street</strong></td>
-                        <td>£1,900</td>
-                        <td>£1,400</td>
-                        <td><strong>£3,300</strong></td>
-                        <td><strong>£94</strong></td>
-                    </tr>
-                    <tr>
-                        <td>BMA House (40 min.)</td>
-                        <td>Included</td>
-                        <td>Included</td>
-                        <td>£4,560 + VAT</td>
-                        <td>£130</td>
-                    </tr>
-                    <tr>
-                        <td>York Road Auditorium</td>
-                        <td>£2,850 + VAT</td>
-                        <td>Separate</td>
-                        <td>~£4,200</td>
-                        <td>£120</td>
-                    </tr>
-                    <tr>
-                        <td>Glaziers Hall</td>
-                        <td>£2,750 + VAT</td>
-                        <td>£1,724 + VAT</td>
-                        <td>~£5,369</td>
-                        <td>£153</td>
-                    </tr>
-                </tbody>
-            </table>
-
             <h3>Next steps</h3>
             <ol>
                 <li>Confirm 26th September date</li>
@@ -755,6 +1357,159 @@
                 <li>Finalise catering package at approximately £40pp</li>
                 <li>Arrange site visit to confirm layout and AV setup</li>
             </ol>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2>Organising committee</h2>
+                            <td>Mayfair, W1</td>
+                            <td>£1,725</td>
+                            <td>£49</td>
+                            <td>40-50</td>
+                            <td>4.5 ⭐ (1,842)</td>
+                            <td>Luxury, Modern</td>
+                            <td><span class="check-icon">✓</span> 25 Sep until 1pm</td>
+                            <td><span class="check-icon">✓</span> £25pp</td>
+                            <td><span class="maybe-icon">○</span></td>
+                            <td><span class="check-icon">✓</span> Partition</td>
+                            <td>15 min</td>
+                            <td><a href="https://chesterfieldmayfair.com/meetings-and-events/corporate">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>Chesterfield Mayfair (Full day)</td>
+                            <td>Mayfair, W1</td>
+                            <td>£2,670</td>
+                            <td>£76</td>
+                            <td>40-50</td>
+                            <td>4.5 ⭐ (1,842)</td>
+                            <td>Luxury, Modern</td>
+                            <td><span class="check-icon">✓</span> 26 Sep full day</td>
+                            <td><span class="check-icon">✓</span> £52pp</td>
+                            <td><span class="maybe-icon">○</span></td>
+                            <td><span class="check-icon">✓</span> Partition</td>
+                            <td>15 min</td>
+                            <td><a href="https://chesterfieldmayfair.com/meetings-and-events/corporate">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>One Great George St - Brunel</td>
+                            <td>Westminster, SW1</td>
+                            <td>£3,300</td>
+                            <td>£94</td>
+                            <td>54 theatre</td>
+                            <td>4.6 ⭐ (89)</td>
+                            <td>Historic, Prestigious</td>
+                            <td><span class="maybe-icon">○</span> 26 Sep TBC</td>
+                            <td><span class="check-icon">✓</span> £40pp</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="maybe-icon">○</span> Limited</td>
+                            <td><span class="check-icon">✓</span> 5 min</td>
+                            <td><a href="https://hirespace.com/Spaces/London/134287/One-Great-George-Street/Brunel-Room/Business">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>One Great George St - Palmer</td>
+                            <td>Westminster, SW1</td>
+                            <td>£3,045</td>
+                            <td>£87</td>
+                            <td>50-70 theatre</td>
+                            <td>4.6 ⭐ (89)</td>
+                            <td>Historic, Prestigious</td>
+                            <td><span class="maybe-icon">○</span> 26 Sep TBC</td>
+                            <td><span class="check-icon">✓</span> All inclusive</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="maybe-icon">○</span> Limited</td>
+                            <td><span class="check-icon">✓</span> 5 min</td>
+                            <td><a href="https://www.onegreatgeorgestreet.com/rooms/medium-rooms/palmer-room">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>BMA House - Prince's Room</td>
+                            <td>Tavistock Sq, WC1</td>
+                            <td>£3,325 + VAT</td>
+                            <td>£95 + VAT</td>
+                            <td>40-70 theatre</td>
+                            <td>4.4 ⭐ (156)</td>
+                            <td>Classic, Professional</td>
+                            <td><span class="check-icon">✓</span> 22, 24, 26 Sep</td>
+                            <td><span class="check-icon">✓</span> All inclusive</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td>20 min</td>
+                            <td><a href="https://bmahouse.org.uk">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>York Road Auditorium</td>
+                            <td>Waterloo, SE1</td>
+                            <td>£2,850 + VAT</td>
+                            <td>£81 + VAT</td>
+                            <td>100 tiered</td>
+                            <td>4.2 ⭐ (45)</td>
+                            <td>Modern, Creative</td>
+                            <td><span class="check-icon">✓</span> 26 Sep ONLY</td>
+                            <td><span class="cross-icon">✗</span> Separate space</td>
+                            <td><span class="check-icon">✓</span> LED</td>
+                            <td><span class="check-icon">✓</span> £1k extra</td>
+                            <td>15 min</td>
+                            <td><a href="https://spacesstories.com/space/york-road/the-auditorium/">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>Glaziers Hall - Bridge Room</td>
+                            <td>London Bridge, SE1</td>
+                            <td>£4,474 + VAT</td>
+                            <td>£128 + VAT</td>
+                            <td>75 theatre</td>
+                            <td>4.5 ⭐ (234)</td>
+                            <td>Traditional, Elegant</td>
+                            <td><span class="maybe-icon">○</span> TBC</td>
+                            <td><span class="check-icon">✓</span> £49.25pp + VAT</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td>25 min</td>
+                            <td><a href="https://www.glaziershall.co.uk/">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>MYO St Paul's - Event Suite</td>
+                            <td>One New Change, EC4</td>
+                            <td>£3,600</td>
+                            <td>£103</td>
+                            <td>86 theatre</td>
+                            <td>4.3 ⭐ (312)</td>
+                            <td>Contemporary, Tech-forward</td>
+                            <td><span class="maybe-icon">○</span> TBC</td>
+                            <td>From £62pp package</td>
+                            <td><span class="check-icon">✓</span> 6 screens</td>
+                            <td><span class="check-icon">✓</span> Lounge</td>
+                            <td><span class="check-icon">✓</span> 2 min</td>
+                            <td><a href="https://myo.co.uk">View →</a></td>
+                        </tr>
+                        <tr>
+                            <td>MYO Victoria St - Lane-Fox</td>
+                            <td>Victoria St, SW1</td>
+                            <td>£2,160</td>
+                            <td>£62</td>
+                            <td>50 theatre</td>
+                            <td>4.3 ⭐ (312)</td>
+                            <td>Contemporary, Tech-forward</td>
+                            <td><span class="maybe-icon">○</span> TBC</td>
+                            <td>From £60pp package</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="maybe-icon">○</span> Atrium</td>
+                            <td>10 min</td>
+                            <td><a href="https://myo.co.uk">View →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="venue-card">
+                <h3>Key Insights</h3>
+                <ul>
+                    <li><strong>Best Value:</strong> The Chesterfield Mayfair (Half day) at £49 per person offers exceptional value for a morning/early afternoon event</li>
+                    <li><strong>Most Flexible:</strong> The Chesterfield Mayfair provides partition options for breakout sessions without minimum attendee requirements</li>
+                    <li><strong>Most Prestigious:</strong> One Great George Street offers the best combination of location, facilities, and reputation for policy events</li>
+                    <li><strong>Trade-offs:</strong> Lower cost options may require confirming capacity and accessibility features</li>
+                </ul>
+            </div>
         </section>
 
         <!-- Contact Section -->
@@ -855,6 +1610,21 @@
             // Update nav tabs
             const tabs = document.querySelectorAll('.nav-tab');
             tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Function for sub-tabs (Table/Map view)
+        function showSubSection(subSectionId) {
+            // Hide all sub-sections
+            const subSections = document.querySelectorAll('.sub-content');
+            subSections.forEach(section => section.classList.remove('active'));
+            
+            // Show selected sub-section
+            document.getElementById(subSectionId).classList.add('active');
+            
+            // Update sub-tabs
+            const subTabs = document.querySelectorAll('.sub-tab');
+            subTabs.forEach(tab => tab.classList.remove('active'));
             event.target.classList.add('active');
         }
 
