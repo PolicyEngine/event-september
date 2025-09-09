@@ -508,6 +508,7 @@
         <div class="container">
             <ul class="nav-tabs">
                 <li class="nav-tab active" onclick="showSection('overview')">Overview</li>
+                <li class="nav-tab" onclick="showSection('decision-matrix')">Agenda recommendation</li>
                 <li class="nav-tab" onclick="showSection('venue')">Venue recommendation</li>
                 <li class="nav-tab" onclick="showSection('event-plan')">Event plan</li>
                 <li class="nav-tab" onclick="showSection('tasks')">Task tracker</li>
@@ -555,6 +556,400 @@
                     Event date (TBC)
                 </div>
             </div>
+        </section>
+
+        <!-- Agenda Recommendation Section -->
+        <section id="decision-matrix" class="content-section">
+            <h2>Agenda Recommendation</h2>
+            
+            <div class="highlight-box" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);">
+                <h3>Event Details</h3>
+                <p><strong>Venue:</strong> Central Hall Westminster - Robert Perks Room</p>
+                <p><strong>Date:</strong> Thursday, 25 September 2025</p>
+                <p><strong>Time:</strong> 12:00-18:00 (6 hours)</p>
+                <p><strong>Capacity:</strong> 40 guests (Cabaret setup)</p>
+            </div>
+
+            <!-- Recommended Agenda -->
+            <div class="venue-card">
+                <h3>Recommended 6-Hour Agenda</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Duration</th>
+                            <th>Session</th>
+                            <th>Format</th>
+                            <th>Speaker/Lead</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #e8f5e9;">
+                            <td><strong>12:00-13:00</strong></td>
+                            <td>60 min</td>
+                            <td>Registration, Lunch & Networking</td>
+                            <td>Networking</td>
+                            <td>PolicyEngine Team</td>
+                            <td>Welcome attendees, name badges, lunch buffet, informal networking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>13:00-13:30</strong></td>
+                            <td>30 min</td>
+                            <td>PolicyEngine Introduction & Vision</td>
+                            <td>Keynote</td>
+                            <td>Max Ghenis (CEO)</td>
+                            <td>PolicyEngine's mission, impact, AI integration, and future vision</td>
+                        </tr>
+                        <tr>
+                            <td><strong>13:30-14:00</strong></td>
+                            <td>30 min</td>
+                            <td>Live PolicyEngine Demonstration</td>
+                            <td>Interactive Demo</td>
+                            <td>Nikhil Woodruff (CTO)</td>
+                            <td>Real-time modeling of current UK policy proposals, technical capabilities</td>
+                        </tr>
+                        <tr>
+                            <td><strong>14:00-14:30</strong></td>
+                            <td>30 min</td>
+                            <td>User Case Study #1</td>
+                            <td>Case Study</td>
+                            <td>PolicyEngine User (TBC)</td>
+                            <td>How we use PolicyEngine: real-world applications and impact</td>
+                        </tr>
+                        <tr>
+                            <td><strong>14:30-15:00</strong></td>
+                            <td>30 min</td>
+                            <td>User Case Study #2</td>
+                            <td>Case Study</td>
+                            <td>PolicyEngine User (TBC)</td>
+                            <td>PolicyEngine in practice: research methodology and outcomes</td>
+                        </tr>
+                        <tr style="background-color: #fff3e0;">
+                            <td><strong>15:00-15:20</strong></td>
+                            <td>20 min</td>
+                            <td>Coffee & Networking Break</td>
+                            <td>Break</td>
+                            <td>-</td>
+                            <td>Refreshments and networking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>15:20-16:00</strong></td>
+                            <td>40 min</td>
+                            <td>Panel: Future of Evidence-Based Policy</td>
+                            <td>Panel Discussion</td>
+                            <td>Nuffield Foundation + 2-3 experts</td>
+                            <td>Cross-sector perspectives on policy modeling, funding, and impact</td>
+                        </tr>
+                        <tr>
+                            <td><strong>16:00-16:30</strong></td>
+                            <td>30 min</td>
+                            <td>UK Policy Modeling Deep Dive</td>
+                            <td>Presentation</td>
+                            <td>Vahid Ahmadi (PolicyEngine)</td>
+                            <td>UK tax-benefit landscape, recent policy impact analysis, case studies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>16:30-17:00</strong></td>
+                            <td>30 min</td>
+                            <td>Technical Innovation at PolicyEngine</td>
+                            <td>Presentation</td>
+                            <td>Anthony Volk (PolicyEngine)</td>
+                            <td>Infrastructure improvements, API developments, performance optimizations</td>
+                        </tr>
+                        <tr style="background-color: #e8f5e9;">
+                            <td><strong>17:00-18:00</strong></td>
+                            <td>60 min</td>
+                            <td>Closing Remarks & Drinks Reception</td>
+                            <td>Networking</td>
+                            <td>Max Ghenis / All</td>
+                            <td>Brief closing (10 min), then drinks, canapés, and informal discussions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Alternative Agenda Formats Comparison -->
+            <div class="venue-card">
+                <h3>Alternative Agenda Formats - Comparative Analysis</h3>
+                
+                <!-- Visual Rating Overview -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem;">
+                    <div style="background: linear-gradient(135deg, #3498db, #2c3e50); color: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <h4 style="color: white; margin: 0;">RECOMMENDED</h4>
+                        <p style="font-size: 2.5rem; margin: 0.5rem 0;">A</p>
+                        <p style="margin: 0;">Balanced Mix</p>
+                        <p style="font-size: 1.5rem; margin: 0.5rem 0;">⭐⭐⭐⭐⭐</p>
+                        <p style="font-size: 0.9rem;">Best for PolicyEngine</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; text-align: center; border: 2px solid #e0e0e0;">
+                        <h4 style="margin: 0; color: #2c3e50;">Option B</h4>
+                        <p style="font-size: 2.5rem; margin: 0.5rem 0; color: #3498db;">B</p>
+                        <p style="margin: 0;">Workshop Focus</p>
+                        <p style="font-size: 1.5rem; margin: 0.5rem 0;">⭐⭐⭐⭐</p>
+                        <p style="font-size: 0.9rem; color: #666;">High engagement</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; text-align: center; border: 2px solid #e0e0e0;">
+                        <h4 style="margin: 0; color: #2c3e50;">Option C</h4>
+                        <p style="font-size: 2.5rem; margin: 0.5rem 0; color: #3498db;">C</p>
+                        <p style="margin: 0;">Conference Style</p>
+                        <p style="font-size: 1.5rem; margin: 0.5rem 0;">⭐⭐⭐</p>
+                        <p style="font-size: 0.9rem; color: #666;">Traditional format</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; text-align: center; border: 2px solid #e0e0e0;">
+                        <h4 style="margin: 0; color: #2c3e50;">Option D</h4>
+                        <p style="font-size: 2.5rem; margin: 0.5rem 0; color: #3498db;">D</p>
+                        <p style="margin: 0;">Hackathon Style</p>
+                        <p style="font-size: 1.5rem; margin: 0.5rem 0;">⭐⭐⭐</p>
+                        <p style="font-size: 0.9rem; color: #666;">High risk/reward</p>
+                    </div>
+                </div>
+
+                <!-- Detailed Comparison Table -->
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #2c3e50; color: white;">
+                            <th style="padding: 1rem; width: 15%;">Time</th>
+                            <th style="padding: 1rem; width: 21.25%; background: #3498db;">Option A: Balanced Mix ⭐⭐⭐⭐⭐</th>
+                            <th style="padding: 1rem; width: 21.25%;">Option B: Workshop Focus ⭐⭐⭐⭐</th>
+                            <th style="padding: 1rem; width: 21.25%;">Option C: Conference Style ⭐⭐⭐</th>
+                            <th style="padding: 1rem; width: 21.25%;">Option D: Hackathon Style ⭐⭐⭐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">12:00-13:00</td>
+                            <td style="background: #e8f5e9;">Registration, Lunch & Networking</td>
+                            <td>Registration, Lunch & Networking</td>
+                            <td>Registration, Lunch & Networking</td>
+                            <td>Registration, Lunch & Team Formation</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">13:00-13:30</td>
+                            <td style="background: #e8f5e9;">Welcome (15min)<br>+ Keynote Start (15min)</td>
+                            <td>Introduction & PolicyEngine Overview</td>
+                            <td>Welcome & Keynote Start</td>
+                            <td>Challenge Briefing</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">13:30-14:00</td>
+                            <td style="background: #e8f5e9;">Keynote (cont. 30min)</td>
+                            <td>Workshop Session 1 (Basic)</td>
+                            <td>Keynote (cont.)</td>
+                            <td rowspan="2">Teams Work on Challenges</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">14:00-15:00</td>
+                            <td style="background: #e8f5e9;">Live PolicyEngine Demo</td>
+                            <td>Workshop Session 1 (cont.)</td>
+                            <td>Research Presentations</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">15:00-15:30</td>
+                            <td style="background: #e8f5e9;">Coffee & Networking Break</td>
+                            <td>Coffee Break</td>
+                            <td>Coffee Break</td>
+                            <td>Coffee Break</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">15:30-16:30</td>
+                            <td style="background: #e8f5e9;">Panel Discussion</td>
+                            <td>Workshop Session 2 (Advanced)</td>
+                            <td>Panel Discussion</td>
+                            <td>Team Presentations Begin</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">16:30-17:00</td>
+                            <td style="background: #e8f5e9;">Interactive Workshop</td>
+                            <td>Group Presentations</td>
+                            <td>PolicyEngine Demo</td>
+                            <td>Expert Panel Feedback</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">17:00-18:00</td>
+                            <td style="background: #e8f5e9;">Closing (10min)<br>+ Drinks Reception (50min)</td>
+                            <td>Closing & Reception</td>
+                            <td>Closing & Reception</td>
+                            <td>Awards, Closing & Reception</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Evaluation Rubric -->
+            <div class="venue-card">
+                <h3>Format Evaluation Rubric</h3>
+                <table>
+                    <thead>
+                        <tr style="background: #2c3e50; color: white;">
+                            <th style="width: 20%;">Criteria</th>
+                            <th style="width: 20%; background: #3498db;">A: Balanced Mix</th>
+                            <th style="width: 20%;">B: Workshop Focus</th>
+                            <th style="width: 20%;">C: Conference Style</th>
+                            <th style="width: 20%;">D: Hackathon Style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">Audience Engagement</td>
+                            <td style="background: #e8f5e9;"><strong>5/5</strong><br>Multiple touchpoints</td>
+                            <td><strong>5/5</strong><br>Hands-on throughout</td>
+                            <td><strong>3/5</strong><br>Mostly passive</td>
+                            <td><strong>4/5</strong><br>Active but limited audience</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">Information Transfer</td>
+                            <td style="background: #e8f5e9;"><strong>5/5</strong><br>Balanced theory & practice</td>
+                            <td><strong>3/5</strong><br>Practice over theory</td>
+                            <td><strong>5/5</strong><br>Maximum content delivery</td>
+                            <td><strong>2/5</strong><br>Limited formal content</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">Networking Opportunities</td>
+                            <td style="background: #e8f5e9;"><strong>5/5</strong><br>Multiple structured breaks</td>
+                            <td><strong>4/5</strong><br>Group work enables networking</td>
+                            <td><strong>3/5</strong><br>Limited to breaks</td>
+                            <td><strong>5/5</strong><br>Team-based networking</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">Skill Development</td>
+                            <td style="background: #e8f5e9;"><strong>4/5</strong><br>45min hands-on session</td>
+                            <td><strong>5/5</strong><br>3 hours of practice</td>
+                            <td><strong>2/5</strong><br>Demo only</td>
+                            <td><strong>4/5</strong><br>Problem-solving skills</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">Stakeholder Appeal</td>
+                            <td style="background: #e8f5e9;"><strong>5/5</strong><br>Appeals to all groups</td>
+                            <td><strong>3/5</strong><br>Technical audience preferred</td>
+                            <td><strong>4/5</strong><br>Traditional, safe choice</td>
+                            <td><strong>2/5</strong><br>May intimidate non-technical</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">Risk Level</td>
+                            <td style="background: #e8f5e9;"><strong>Low</strong><br>Proven format mix</td>
+                            <td><strong>Medium</strong><br>Requires tech setup</td>
+                            <td><strong>Low</strong><br>Standard format</td>
+                            <td><strong>High</strong><br>Success depends on teams</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; background: #f8f9fa;">PolicyEngine Goals</td>
+                            <td style="background: #e8f5e9;"><strong>5/5</strong><br>Showcases all aspects</td>
+                            <td><strong>4/5</strong><br>Deep product understanding</td>
+                            <td><strong>3/5</strong><br>Limited interaction</td>
+                            <td><strong>3/5</strong><br>May miss key messages</td>
+                        </tr>
+                        <tr style="background: #fff3e0;">
+                            <td style="font-weight: bold;">TOTAL SCORE</td>
+                            <td style="background: #27ae60; color: white; font-weight: bold; font-size: 1.2rem;">33/35 ⭐⭐⭐⭐⭐</td>
+                            <td style="font-weight: bold;">29/35 ⭐⭐⭐⭐</td>
+                            <td style="font-weight: bold;">24/35 ⭐⭐⭐</td>
+                            <td style="font-weight: bold;">24/35 ⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <!-- Speaker Lineup -->
+            <div class="venue-card">
+                <h3>Speaker Lineup & Requirements</h3>
+                
+                <h4>Session 1: PolicyEngine Foundation (13:00-15:00)</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Speaker</th>
+                            <th>Topic</th>
+                            <th>Focus Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13:00-13:30</td>
+                            <td><strong>Max Ghenis</strong><br>CEO, PolicyEngine</td>
+                            <td>PolicyEngine Introduction & Vision</td>
+                            <td>• PolicyEngine's mission and global impact<br>• AI integration and transformation<br>• Future vision and roadmap<br>• Opening keynote presentation</td>
+                        </tr>
+                        <tr>
+                            <td>13:30-14:00</td>
+                            <td><strong>Nikhil Woodruff</strong><br>CTO, PolicyEngine</td>
+                            <td>Live Demonstration</td>
+                            <td>• Real-time UK policy modeling<br>• Current proposals analysis<br>• Platform technical capabilities<br>• Interactive Q&A</td>
+                        </tr>
+                        <tr style="background-color: #f0f8ff;">
+                            <td>14:00-14:30</td>
+                            <td><strong>User Case Study #1</strong><br>External User (TBC)</td>
+                            <td>PolicyEngine in Practice</td>
+                            <td>• Real-world applications<br>• Research methodology<br>• Impact and outcomes<br>• <strong>NEED TO IDENTIFY SPEAKER</strong></td>
+                        </tr>
+                        <tr style="background-color: #f0f8ff;">
+                            <td>14:30-15:00</td>
+                            <td><strong>User Case Study #2</strong><br>External User (TBC)</td>
+                            <td>PolicyEngine Implementation</td>
+                            <td>• Practical usage examples<br>• Integration challenges and solutions<br>• Policy analysis results<br>• <strong>NEED TO IDENTIFY SPEAKER</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Session 2: External Perspectives & Technical Deep Dive (15:20-17:00)</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Speaker</th>
+                            <th>Topic</th>
+                            <th>Focus Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #fff3e0;">
+                            <td>15:20-16:00</td>
+                            <td><strong>Panel Discussion</strong><br>Nuffield Foundation + 2-3 experts</td>
+                            <td>Future of Evidence-Based Policy</td>
+                            <td>• Cross-sector perspectives<br>• Research funding landscape<br>• Policy modeling impact<br>• <strong>MODERATOR & PANELISTS TBC</strong></td>
+                        </tr>
+                        <tr>
+                            <td>16:00-16:30</td>
+                            <td><strong>Vahid Ahmadi</strong><br>PolicyEngine Team</td>
+                            <td>UK Policy Modeling Deep Dive</td>
+                            <td>• UK tax-benefit landscape analysis<br>• Recent policy impact studies<br>• Case studies and examples<br>• UK-specific applications</td>
+                        </tr>
+                        <tr>
+                            <td>16:30-17:00</td>
+                            <td><strong>Anthony Volk</strong><br>PolicyEngine Team</td>
+                            <td>Technical Innovation</td>
+                            <td>• Infrastructure improvements<br>• API developments and roadmap<br>• Performance optimizations<br>• Future technical capabilities</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Outstanding Speaker Requirements</h4>
+                <div style="background-color: #ffebee; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                    <h5 style="margin-top: 0; color: #c62828;">🎯 PRIORITY SPEAKERS TO CONFIRM:</h5>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>User Case Study Speaker #1</strong> (14:00-14:30) - Think tank, academic, or government user</li>
+                        <li><strong>User Case Study Speaker #2</strong> (14:30-15:00) - Different sector/organization</li>
+                        <li><strong>Panel Moderator</strong> (15:20-16:00) - Senior journalist or academic</li>
+                        <li><strong>Nuffield Foundation Representative</strong> (15:20-16:00) - Research/funding perspective</li>
+                        <li><strong>Additional Panel Experts</strong> (15:20-16:00) - 2-3 policy/research leaders</li>
+                    </ul>
+                </div>
+
+                <h4>Suggested Panel Composition (15:20-16:00)</h4>
+                <div style="background-color: #e8f5e9; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Moderator:</strong> Senior policy journalist (BBC, Financial Times, Guardian)</li>
+                        <li><strong>Nuffield Foundation:</strong> Research director or policy lead</li>
+                        <li><strong>Government:</strong> Treasury, DWP, or Cabinet Office senior analyst</li>
+                        <li><strong>Think Tank:</strong> IFS, Resolution Foundation, or IPPR director/researcher</li>
+                    </ul>
+                </div>
+            </div>
+
+
         </section>
 
         <!-- Event Plan Section -->
