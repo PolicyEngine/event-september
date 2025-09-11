@@ -1,0 +1,748 @@
+\documentclass[a4paper,11pt]{article}
+
+% Required packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+% Page setup
+\geometry{
+    a4paper,
+    left=20mm,
+    right=20mm,
+    top=15mm,
+    bottom=15mm
+}
+
+% Define colors
+\definecolor{darkblue}{HTML}{1e3a8a}
+\definecolor{mediumblue}{HTML}{3b82f6}
+\definecolor{lightblue}{HTML}{dbeafe}
+\definecolor{black}{HTML}{000000}
+\definecolor{darkgray}{HTML}{374151}
+\definecolor{mediumgray}{HTML}{6b7280}
+\definecolor{lightgray}{HTML}{f9fafb}
+
+% Font setup (PolicyEngine brand style - clean and modern)
+\setmainfont[
+    BoldFont = {Helvetica Neue Bold},
+    ItalicFont = {Helvetica Neue Light Italic},
+    BoldItalicFont = {Helvetica Neue Bold Italic},
+    Numbers = {Lining},
+    Ligatures = {TeX}
+]{Helvetica Neue Light}
+
+\setsansfont[
+    BoldFont = {Helvetica Neue Bold},
+    Ligatures = {TeX}
+]{Helvetica Neue}
+
+% Custom commands
+\newcommand{\brandlogo}{%
+    \includegraphics[height=1.5cm]{../images/logo.png}
+}
+
+\newcommand{\sectionheader}[1]{%
+    \vspace{20pt}
+    {\color{darkblue}\LARGE\bfseries #1}
+    \vspace{10pt}
+}
+
+\newcommand{\personwithphoto}[3]{%
+    \begin{minipage}{0.15\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \clip (0,0) circle (0.8cm);
+            \node at (0,0) {\includegraphics[width=1.6cm, height=1.6cm, keepaspectratio]{#1}};
+        \end{tikzpicture}
+    \end{minipage}%
+    \begin{minipage}{0.8\textwidth}
+        \textbf{\color{darkblue}#2} \\
+        #3
+    \end{minipage}
+}
+
+\newcommand{\statbox}[2]{%
+    \begin{tcolorbox}[
+        colback=lightgray,
+        colframe=lightgray,
+        rounded corners,
+        width=0.22\textwidth,
+        height=3cm,
+        halign=center,
+        valign=center
+    ]
+    {\color{darkblue}\Huge\bfseries #1}
+    
+    \vspace{5pt}
+    
+    {\color{mediumgray}\small #2}
+    \end{tcolorbox}
+}
+
+\newcommand{\highlightbox}[1]{%
+    \begin{tcolorbox}[
+        colback=lightblue,
+        colframe=darkblue,
+        leftrule=4mm,
+        rightrule=0mm,
+        toprule=0mm,
+        bottomrule=0mm,
+        sharp corners
+    ]
+    #1
+    \end{tcolorbox}
+}
+
+% Remove page numbers and headers for cover page
+\pagestyle{empty}
+
+% Title formatting
+\titleformat{\section}
+{\color{darkblue}\LARGE\bfseries}
+{\thesection}
+{1em}
+{}
+
+\titleformat{\subsection}
+{\color{darkblue}\Large\bfseries}
+{\thesubsection}
+{1em}
+{}
+
+% Document begins
+\begin{document}
+
+% COVER PAGE
+\vspace*{3cm}
+
+\begin{center}
+
+% Logo section
+\includegraphics[height=2.5cm]{../images/logo.png}
+
+\vspace{2cm}
+
+% Main title
+\begin{tcolorbox}[
+    colback=white,
+    colframe=white,
+    rounded corners,
+    width=12cm,
+    halign=center
+]
+{\color{darkblue}\Huge\bfseries PolicyEngine UK}
+
+\vspace{0.3cm}
+
+{\color{mediumblue}\LARGE\bfseries Impact Report 2025}
+\end{tcolorbox}
+
+\vspace{1.5cm}
+
+% Subtitle
+{\color{darkgray}\Large\textit{Advancing Evidence-Based Policy Making}}
+
+\vspace{1cm}
+
+% Event info
+\begin{tcolorbox}[
+    colback=lightblue,
+    colframe=darkblue,
+    rounded corners,
+    width=10cm,
+    halign=center
+]
+{\color{darkblue}\large\bfseries Event Handout}
+
+{\color{darkblue}\normalsize September 25, 2025}
+\end{tcolorbox}
+
+\vspace{3cm}
+
+
+\vspace{2cm}
+
+{\color{mediumgray}\large September 2025}
+
+\end{center}
+
+\newpage
+
+% PAGE 2: IMPACT OVERVIEW
+\color{black}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\color{mediumgray}Page \thepage}
+
+
+\newpage
+
+% PAGE 3: TEAM
+\vspace{15pt}
+
+
+\sectionheader{Our people}
+
+PolicyEngine's team builds open-source tools that help anyone understand how government policies affect real families and the economy.
+
+\vspace{20pt}
+
+\begin{tcolorbox}[
+    colback=lightblue,
+    colframe=darkblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}\Large Leadership}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\personwithphoto{../images/max-ghenis.png}{Max Ghenis, Co-founder \& CEO}{Former Google data scientist and UBI Center president. Holds degrees from UC Berkeley (Operations Research) and MIT (Data, Economics \& Development Policy).}
+
+\vspace{12pt}
+
+\personwithphoto{../images/nikhil-woodruff.png}{Nikhil Woodruff, Co-founder \& CTO}{Former UBI Center UK Research Director and Caspian data scientist. Computer Science graduate from University of Durham with expertise in microsimulation.}
+
+\vspace{20pt}
+
+\begin{tcolorbox}[
+    colback=lightblue,
+    colframe=darkblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}\Large Research \& Development Team}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\personwithphoto{../images/pavel-makarchuk.png}{Pavel Makarchuk, Policy Modeling Manager}{Economics graduate specializing in economic migration analysis and policy modeling frameworks.}
+
+\vspace{12pt}
+
+\personwithphoto{../images/anthony-volk.jpg}{Anthony Volk, Full-Stack Engineer}{Harvard graduate in Government and East Asian Studies, focused on building accessible policy tools and digital infrastructure.}
+
+\vspace{12pt}
+
+\personwithphoto{../images/vahid-ahmadi.jpeg}{Vahid Ahmadi, Research Associate}{Former LSE Centre for Macroeconomics researcher with degrees from LMU Munich (Economics) and Sharif University (Engineering).}
+
+\vspace{12pt}
+
+\personwithphoto{../images/daphne-hansell.jpeg}{Daphne Hansell, Research Associate}{Healthcare policy specialist and Bryn Mawr Public Health graduate, focusing on tax-benefit system interactions.}
+
+\vspace{12pt}
+
+\personwithphoto{../images/david-trimmer.jpeg}{David Trimmer, Policy Research Fellow}{MPA from GWU and contributor to People's Policy Project, specializing in social policy analysis and implementation.}
+
+\vspace{12pt}
+
+\personwithphoto{../images/ziming-hua.jpg}{Ziming Hua, Policy Modeling Fellow}{Mathematical finance and business analytics expert, developing advanced simulation models for policy impact assessment.}
+
+
+\newpage
+
+% PAGE 4: TECHNICAL ARTICLE
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    rounded corners,
+    fontupper=\color{white}\Large\bfseries
+]
+How PolicyEngine UK Models Behavioural Responses
+\end{tcolorbox}
+
+\vspace{15pt}
+
+
+\vspace{20pt}
+
+PolicyEngine UK goes beyond static calculations to predict how real people change their behavior when policies change. When we model a new tax or benefit, we don't just calculate the direct costs - we predict how people will respond.
+
+\vspace{15pt}
+
+\highlightbox{
+\textbf{What This Means:} If you increase benefits, some people may work fewer hours. If you cut taxes, others may work more. Our models capture these real-world responses to give accurate policy predictions.
+}
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Elasticity Implementation}
+
+Our system incorporates empirically-derived elasticity parameters from peer-reviewed research:
+
+\begin{itemize}[leftmargin=15pt]
+\item \textbf{Labor supply elasticity:} 0.25 for primary earners, 0.75 for secondary earners
+\item \textbf{Participation elasticity:} Varies by demographic group and policy context
+\item \textbf{Consumption responses:} Integrated with expenditure survey data
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Microsimulation Integration}
+
+The behavioral responses are integrated into our microsimulation framework through:
+
+\begin{enumerate}[leftmargin=15pt]
+\item Static baseline calculation of policy impacts
+\item Application of behavioral adjustment algorithms
+\item Iterative equilibrium solving for market-level effects
+\item Validation against historical policy changes
+\end{enumerate}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\highlightbox{
+\textbf{Research Impact:} This methodology has been used to analyze Universal Basic Income pilots, tax credit reforms, and benefit system changes, providing evidence for policy makers across the UK.
+}
+
+\newpage
+
+% PAGE 5: GRANT ANNOUNCEMENT
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    rounded corners,
+    fontupper=\color{white}\Large\bfseries
+]
+Nuffield Foundation Awards £250k to Enhance PolicyEngine UK
+\end{tcolorbox}
+
+\vspace{15pt}
+
+
+\vspace{20pt}
+
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    rounded corners,
+    fontupper=\color{white}\large
+]
+\textbf{Grant will support expanding and localising tax-benefit microsimulation capabilities.}
+\end{tcolorbox}
+
+\vspace{20pt}
+
+The Nuffield Foundation has awarded PolicyEngine £250,000 to make our UK policy modeling even more powerful and accurate. This 18-month project will deliver major improvements that benefit researchers, policymakers, and citizens.
+
+\vspace{15pt}
+
+\textbf{Key Areas of Development:}
+
+\begin{tcolorbox}[colback=lightgray, colframe=lightgray, rounded corners]
+\textbf{Enhanced Regional Modeling} \\
+Incorporating local authority-level data for more precise geographic analysis
+\end{tcolorbox}
+
+\vspace{10pt}
+
+\begin{tcolorbox}[colback=lightgray, colframe=lightgray, rounded corners]
+\textbf{Advanced Benefit System Coverage} \\
+Expanding support for Housing Benefit, Council Tax Support, and Universal Credit interactions
+\end{tcolorbox}
+
+\vspace{10pt}
+
+\begin{tcolorbox}[colback=lightgray, colframe=lightgray, rounded corners]
+\textbf{Behavioral Response Improvements} \\
+Refining elasticity parameters and adding new response channels
+\end{tcolorbox}
+
+\vspace{10pt}
+
+\begin{tcolorbox}[colback=lightgray, colframe=lightgray, rounded corners]
+\textbf{Academic Partnership Expansion} \\
+Collaborating with UK universities to validate and improve our models
+\end{tcolorbox}
+
+\vspace{20pt}
+
+\highlightbox{
+\textbf{Our Goal:} Make PolicyEngine the go-to tool for anyone who needs to understand how UK policies affect real families - from government analysts to academic researchers to advocacy groups.
+
+\vspace{10pt}
+
+\hfill — \textbf{Max Ghenis, CEO of PolicyEngine}
+}
+
+\vspace{20pt}
+
+\textbf{Get Involved}
+
+We welcome collaboration from researchers, policy analysts, and organizations interested in using PolicyEngine for their work. Visit \href{https://policyengine.org}{policyengine.org} to explore our platform and join our community.
+
+\newpage
+
+% PAGE 5: VAT THRESHOLD ANALYSIS
+\vspace{20pt}
+
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    fontupper=\color{white}\Large\bfseries
+]
+How Changing the VAT Threshold Affects UK Revenues
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\vspace{10pt}
+
+\highlightbox{
+\textbf{Research Overview:} PolicyEngine built a computer model of every UK business to answer: what happens if we change the VAT registration threshold? We tested thresholds from £70,000 to £120,000 to show the government revenue and business impacts.
+}
+
+\vspace{15pt}
+
+The UK requires businesses to register for VAT and charge customers 20\% on their sales once annual turnover reaches £90,000, up from £85,000 in 2024-25. The Telegraph reported that Chancellor Rachel Reeves is considering further increases to the VAT threshold.
+
+\vspace{15pt}
+
+\textbf{Key Methodology}
+
+We created a realistic dataset of UK businesses using official government statistics. This synthetic dataset mirrors real UK businesses by size, industry, and VAT status - but protects actual business privacy.
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Revenue Impact Analysis (2026-27)}
+
+\vspace{10pt}
+
+\begin{tabular}{l r r}
+\textcolor{darkblue}{\textbf{VAT Threshold}} & \textcolor{darkblue}{\textbf{Revenue Impact}} & \textcolor{darkblue}{\textbf{Firms Affected}} \\[8pt]
+\textbf{£70,000} & +£642 million & +109,000 firms \\
+\textbf{£90,000} & Baseline & Baseline \\
+\textbf{£100,000} & -£371 million & -48,000 firms \\
+\textbf{£120,000} & -£1.1 billion & -116,000 firms \\
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\textbf{Model Validation}
+
+HMRC published revenue projections for raising the VAT threshold from £85,000 to £90,000 across the 2024-29 period. Both models project revenue losses in the first four years, followed by gains in 2028-29. HMRC estimates a £185 million loss in 2025-26; PolicyEngine projects £184 million. PolicyEngine's estimates deviate an average 12.3\% from HMRC's projections across all five years.
+
+\vspace{15pt}
+
+\highlightbox{
+\textbf{Key Finding:} A £70,000 threshold would generate approximately £642 million additional revenue while adding 109,000 firms to VAT registration. Conversely, a £120,000 threshold would reduce revenue by approximately £1.1 billion while removing 116,000 firms from registration.
+}
+
+\vspace{15pt}
+
+\textbf{Business Distribution Impact}
+
+ONS data shows 32.1\% of UK firms have turnover between £100,000-£249,000, with 14.3\% below £50,000 and 19.7\% in the £50,000-£99,000 range. Most UK businesses operate with turnover below £250,000, making VAT threshold changes particularly impactful for small and medium enterprises.
+
+\vspace{15pt}
+
+\textbf{Conclusion}
+
+This VAT analysis shows PolicyEngine's new capability: modeling business impacts alongside household effects. We can now analyze how tax changes affect both families and firms. Next, we'll use this model to explore smart policy design that avoids sudden cliffs and supports business growth.
+
+\newpage
+
+% PAGE 6: CHILDCARE PROGRAMMES ANALYSIS
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    rounded corners,
+    fontupper=\color{white}\Large\bfseries
+]
+Childcare Programmes in PolicyEngine UK
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\vspace{20pt}
+
+PolicyEngine models all major UK childcare support programs. Want to know who benefits from Tax-Free Childcare or how much universal childcare costs? Our model shows exactly which families get help and how much the government spends.
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Key Programmes Modeled}
+
+\begin{itemize}[leftmargin=15pt]
+\item \textbf{Tax-Free Childcare:} Government adds £2 for every £8 parents contribute, up to £2,000 per child annually
+\item \textbf{Extended childcare entitlement:} 15-30 hours of free childcare weekly for working parents
+\item \textbf{Universal childcare entitlement:} 15 hours weekly for all 3-4 year olds in England
+\item \textbf{Targeted childcare entitlement:} 15 hours weekly for eligible 2-year-olds
+\item \textbf{Care to Learn:} Covers childcare costs for parents under 20 in education
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\textbf{Model Accuracy and Validation}
+
+Our microsimulation model demonstrates strong alignment with government statistics. For 2024, PolicyEngine's budgetary estimates show relative errors ranging from -10.0\% to 3.8\% compared to official figures, with most programmes within 6\% accuracy.
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}2025 Budget Projections}
+
+\vspace{10pt}
+
+\begin{tabular}{l r r}
+\textcolor{darkblue}{\textbf{Programme}} & \textcolor{darkblue}{\textbf{Budget (£bn)}} & \textcolor{darkblue}{\textbf{Children (000s)}} \\[8pt]
+\textbf{Extended childcare} & £4.4 & 970 \\
+\textbf{Universal childcare} & £1.8 & 520 \\
+\textbf{Tax-Free Childcare} & £0.7 & 740 \\
+\textbf{Targeted childcare} & £0.5 & 100 \\
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\highlightbox{
+\textbf{Technical Innovation:} Not everyone who's eligible for benefits actually claims them. Our model accounts for this reality by matching real-world participation rates, giving accurate predictions of program costs and who actually receives support.
+}
+
+\vspace{15pt}
+
+\textbf{Policy Impact Analysis}
+
+Our analysis reveals policy problems that hurt families. For example, Tax-Free Childcare cuts off completely at £100,000 income - meaning a family earning £99,999 gets £2,000 support, but a family earning £100,001 gets nothing. These 'cliffs' discourage people from earning more.
+
+\vspace{10pt}
+
+\textbf{Data Integration}
+
+PolicyEngine integrates these programmes with enhanced Family Resources Survey data, applying empirically-derived take-up rates ranging from 56\% to 81\% across different programmes to generate representative aggregate statistics.
+
+\newpage
+
+% PAGE 7: BENEFITS SYSTEM ANALYSIS
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    rounded corners,
+    fontupper=\color{white}\Large\bfseries
+]
+Benefits System in PolicyEngine UK
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\vspace{20pt}
+
+PolicyEngine models the complete UK benefits system - from Universal Credit to Child Benefit to disability payments. Enter any household's details and see exactly what support they can get and how much it costs the government.
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Means-Tested Benefits}
+
+\begin{itemize}[leftmargin=15pt]
+\item \textbf{Universal Credit:} £79.4bn projected cost, affecting 21.8\% of population
+\item \textbf{Housing Benefit:} £7.6bn projected cost for rental support
+\item \textbf{Pension Credit:} £7.4bn providing income guarantee for pensioners
+\item \textbf{Tax Credits:} Legacy system with <£1bn remaining expenditure
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Non-Means-Tested Benefits}
+
+\begin{itemize}[leftmargin=15pt]
+\item \textbf{Personal Independence Payment:} £30.6bn for disability support (10.3\% population)
+\item \textbf{Child Benefit:} £12.3bn universal support affecting 31.3\% of population
+\item \textbf{Attendance Allowance:} £10.2bn for pension-age disability support
+\item \textbf{Disability Living Allowance:} £9.3bn for children and protected adults
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\textbf{Model Accuracy and Validation}
+
+Our model's predictions closely match government forecasts. For Universal Credit, we're within 2.6\% of official estimates. Most benefit programs are within 10\% accuracy - proving our model reflects reality.
+
+\vspace{15pt}
+
+\highlightbox{
+\textbf{System Integration:} Benefits don't work in isolation. Our model captures how they interact - like how earning more money gradually reduces Universal Credit, or how disability benefits affect other entitlements. This shows the real impact on families.
+}
+
+\vspace{15pt}
+
+\textbf{Technical Innovation}
+
+Our model captures real-world complexity. Universal Credit reduces by 55p for every £1 earned. Housing support is capped at local rates. Child Benefit gets clawed back through taxes for high earners. We model all these details so predictions match reality.
+
+\vspace{10pt}
+
+\textbf{Policy Impact Analysis}
+
+We identify where the current system discourages work. Benefits that cut off suddenly can trap people in low earnings. Disabled people face particularly complex interactions that can penalize working. Our analysis helps design fairer policies.
+
+\newpage
+
+% PAGE 8: TAX SYSTEM ANALYSIS
+\begin{tcolorbox}[
+    colback=darkblue,
+    colframe=darkblue,
+    rounded corners,
+    fontupper=\color{white}\Large\bfseries
+]
+Complete UK Tax System in PolicyEngine
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\vspace{20pt}
+
+PolicyEngine models every major tax in the UK system - from income tax to VAT to property taxes. We also model proposed taxes like carbon taxes and wealth taxes, so you can test policy ideas before they become law.
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Direct Taxes (on earnings and profits)}
+
+\begin{itemize}[leftmargin=15pt]
+\item \textbf{Income Tax:} £322bn revenue - we model all rates, allowances, and income types
+\item \textbf{National Insurance:} £180bn revenue - employee, employer, and self-employed contributions
+\item \textbf{Capital Gains Tax:} £17bn revenue - includes behavioral responses to rate changes
+\item \textbf{Council Tax:} Local property taxes varying by area and property value
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\begin{tcolorbox}[
+    colback=lightgray,
+    colframe=mediumblue,
+    rounded corners,
+    leftrule=3mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm
+]
+\textbf{\color{darkblue}Indirect Taxes (on spending)}
+
+\begin{itemize}[leftmargin=15pt]
+\item \textbf{VAT:} £199bn revenue - 20\% standard rate, 5\% reduced rate, complex exemptions
+\item \textbf{Fuel Duty:} £28bn revenue - affects transport costs and carbon emissions
+\item \textbf{Property Transaction Taxes:} £13bn revenue - stamp duty varies by nation
+\item \textbf{Business Rates:} £24bn revenue - affects where businesses locate and invest
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{15pt}
+
+\textbf{What Makes Our Tax Modeling Unique}
+
+Our predictions are remarkably accurate: within 2\% for Income Tax, 7\% for Capital Gains Tax. We don't just calculate static revenue - we predict how people change their behavior when taxes change, like realizing fewer capital gains when rates rise.
+
+\vspace{15pt}
+
+\highlightbox{
+\textbf{Policy Innovation:} Want to test a carbon tax or wealth tax? We model proposed taxes alongside existing ones, showing exactly how new policies would affect different income groups and government revenue.
+}
+
+\vspace{15pt}
+
+\textbf{Real-World Applications}
+
+We model complex real-world features: different VAT rates for different goods, stamp duty varying by country (England vs Scotland vs Wales), marriage allowance transfers, and capital gains behavioral responses. This detail matters for accurate policy analysis.
+
+\vspace{10pt}
+
+\textbf{Future Tax Policies}
+
+Our platform includes carbon taxes (£X per ton CO2), wealth taxes (on total assets), land value taxes (on unimproved land value), and private school VAT. Policymakers can test these ideas and see their full impact before implementation.
+
+\end{document}
