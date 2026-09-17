@@ -36,3 +36,7 @@ The site is a single HTML page with tabbed navigation containing:
 ## Recommended venue
 
 One Great George Street - Brunel Room on Friday 26th September 2025 for 35 attendees.
+
+## License
+
+Code in this repository is released under the [MIT License](LICENSE). Original text and figures are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) with attribution to PolicyEngine. Third-party data and materials keep their own terms.
